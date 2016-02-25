@@ -18,8 +18,15 @@ namespace GuessingGame
 
         private void ResultScreen_Load(object sender, EventArgs e)
         {
-            // Form.1 first and then use what ever you use
+            
+            for (int x = 0; x < Form1.userGuesses.Count; x++)
+            {
+                originalOrder.Text += " " + Convert.ToString(Form1.userGuesses[x]);
+            }
             // guesses.Count() to know the amount of guesses I have made
+            numberofGuesses.Text += Convert.ToString(Form1.userGuesses.Count);
+            Form1.userGuesses.Sort();
+            
         }
     }
 }
