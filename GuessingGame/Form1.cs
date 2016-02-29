@@ -55,8 +55,6 @@ namespace GuessingGame
                 ResultScreen rs = new ResultScreen();
                 this.Controls.Add(rs);
                 rs.BringToFront();
-
-                // create new instance of your results screen and show it.
             }
 
             // clear out the input box 

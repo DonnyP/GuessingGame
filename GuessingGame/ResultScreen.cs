@@ -18,15 +18,21 @@ namespace GuessingGame
 
         private void ResultScreen_Load(object sender, EventArgs e)
         {
-            
+            //Number of Gusses
+            numberofGuesses.Text += Convert.ToString(Form1.userGuesses.Count);
+
+            //Original Order
             for (int x = 0; x < Form1.userGuesses.Count; x++)
             {
                 originalOrder.Text += " " + Convert.ToString(Form1.userGuesses[x]);
             }
-            // guesses.Count() to know the amount of guesses I have made
-            numberofGuesses.Text += Convert.ToString(Form1.userGuesses.Count);
+
+            //Sorted Order
             Form1.userGuesses.Sort();
-            
+            for (int x = 0; x < Form1.userGuesses.Count; x++)
+            {
+                sortedOrder.Text += " " + Convert.ToString(Form1.userGuesses[x]);
+            }
         }
     }
 }
